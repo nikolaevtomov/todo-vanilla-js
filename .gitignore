@@ -1,0 +1,15 @@
+# dependencies
+/node_modules/
+
+# coverage
+/coverage
+
+# production
+build*/
+
+# misc
+.vscode/
+.DS_Store
+.env*.local
+npm-debug.log*
+dist/

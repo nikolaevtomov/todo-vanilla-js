@@ -1,0 +1,36 @@
+@import 'node_modules/normalize-scss/sass/normalize/import-now';
+
+$font-face-path: '../static/fonts/';
+
+@font-face {
+  font-family: 'fira_coderegular';
+  src: url('#{$font-face-path}firacode-regular-webfont.woff2') format('woff2'),
+    url('#{$font-face-path}firacode-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'fira_coderegular', Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 26px;
+  margin: auto;
+  animation: rotating 2s linear infinite;
+}
