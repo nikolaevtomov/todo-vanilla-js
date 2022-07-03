@@ -8,5 +8,17 @@
 }
 
 .button {
-  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &.submit {
+    height: 100%;
+    margin-left: 6px;
+  }
+
+  &.clear {
+    border: 0 none;
+    background-color: transparent;
+  }
 }

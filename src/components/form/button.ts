@@ -13,7 +13,7 @@ class Button implements Observer {
       'button',
       {},
       {
-        class: 'button',
+        class: 'button submit',
         type: 'submit',
         ...(Boolean(state === 0) && { disabled: 'true' }),
       },

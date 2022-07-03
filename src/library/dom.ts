@@ -3,9 +3,15 @@ export const elementFactory = (
   // eslint-disable-next-line no-unused-vars
   events: Record<string, (event?: Event) => void>,
   attributes: Record<string, string>,
-  ...children: Array<HTMLElement | string>
+  ...children: Array<HTMLElement | SVGSVGElement | SVGPathElement | string>
 ) => {
-  const el = document.createElement(type);
+  let el: HTMLElement | SVGSVGElement | SVGPathElement;
+
+  if (type === 'svg' || type === 'path') {
+    el = document.createElementNS('http://www.w3.org/2000/svg', type);
+  } else {
+    el = document.createElement(type);
+  }
 
   for (const key in attributes) {
     el.setAttribute(key, attributes[key]);

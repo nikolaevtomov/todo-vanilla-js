@@ -2,7 +2,7 @@
   "name": "todo-vanilla-js",
   "version": "0.0.1",
   "description": "a better typescript project",
-  "main": "src/index.tsx",
+  "main": "src/index.ts",
   "scripts": {
     "start": "cross-env NODE_ENV=development DEBUG=true webpack serve --mode development",
     "build:clean": "rm -rf dist && mkdir dist",
@@ -11,7 +11,7 @@
     "build": "npm run build:all",
     "prettier": "prettier --write '**/*.{ts,tsx,js,jsx,css,scss,less,json}'",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "lint": "tsc --noEmit && eslint 'src/*.{ts,tsx,js,jsx,css,less,json}' --quiet --fix",
+    "lint": "tsc --noEmit && eslint 'src/*.{ts,tsx,js,jsx,css,less,json}' --quiet --fix"
   },
   "dependencies": {
     "@babel/core": "^7.13.15",

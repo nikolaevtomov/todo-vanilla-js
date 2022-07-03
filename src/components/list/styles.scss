@@ -1,0 +1,18 @@
+.list {
+  padding-left: 0;
+}
+
+.item {
+  display: flex;
+  margin-bottom: 8px;
+
+  .name {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    &.done {
+      text-decoration: line-through;
+    }
+  }
+}

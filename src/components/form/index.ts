@@ -34,9 +34,12 @@ class Form {
             );
 
             AppState.update({
-              [LIST_DATA_ATTRIBUTE]: AppState.get()[LIST_DATA_ATTRIBUTE].concat(
-                AppState.get()[FORM_DATA_ATTRIBUTE],
-              ),
+              [LIST_DATA_ATTRIBUTE]: AppState.get()
+                [LIST_DATA_ATTRIBUTE].concat({
+                  name: AppState.get()[FORM_DATA_ATTRIBUTE],
+                  done: false,
+                })
+                .sort((a, b) => a.name.localeCompare(b.name)),
             });
 
             AppState.update({
